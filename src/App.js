@@ -1,5 +1,6 @@
 import './App.css';
 import Weather from "./Weather";
+import Search from "./Search";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
           Weather App
         </h1>
         <Weather city="Nice" />
+        <Search />
       </header>
     </div>
   );
