@@ -1,11 +1,11 @@
 import './App.css';
-import SearchEngine from "./SearchEngine";
+import Main from "./Main";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <SearchEngine />
+        <Main />
       </header>
     </div>
   );

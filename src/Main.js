@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
-import Search from "./Search";
+import SearchEngine from "./SearchEngine";
 import Signature from "./Signature";
-import WeatherDescription from "./WeatherDescrption";
+import WeatherDescription from "./WeatherDescription";
 
 export default function Main() {
   let weatherData = {
@@ -15,7 +15,7 @@ export default function Main() {
   return (
     <div>
       <div className="body">
-        <Search />
+        <SearchEngine />
 
         <div className="city-name">
           <h2>{weatherData.city}</h2>
