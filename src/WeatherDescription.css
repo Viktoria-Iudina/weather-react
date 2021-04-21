@@ -1,0 +1,9 @@
+.weather-description {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 8%;
+  padding-right: 20%;
+  padding-top: 1rem;
+  line-height: 1em;
+  padding-bottom: 1rem;
+}
