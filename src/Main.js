@@ -13,7 +13,7 @@ export default function Main() {
     imgUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png"
   };
   return (
-    <div>
+    <div className="container">
       <div className="body">
         <SearchEngine />
 
