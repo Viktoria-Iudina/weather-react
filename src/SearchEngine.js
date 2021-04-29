@@ -20,13 +20,13 @@ export default function Search() {
             <input
               type="submit"
               value="Search"
-              className="btn btn-outline-success shadow-sm"
+              className="btn btn-success shadow-sm"
             />
           </div>
 
           <div className="col-4">
             <input
-              className="current-location btn btn-success shadow-sm"
+              className="current-location btn btn-outline-success shadow-sm"
               type="submit"
               value=" 📍  "
             />
