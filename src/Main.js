@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-import SearchEngine from "./SearchEngine";
 import Signature from "./Signature";
 import WeatherDescription from "./WeatherDescription";
 import Forecast from "./Forecast";
@@ -16,7 +15,41 @@ export default function Main() {
   return (
     <div className="container">
       <div className="body">
-        <SearchEngine />
+
+        {/* SearchEngine */}
+   
+        <div className="Search">
+        <form>
+          <div className="row">
+            <div className="col-8">
+              <input
+                type="text"
+                placeholder="Search City..."
+                autoFocus="on"
+                className="form-control"
+              />
+            </div>
+
+            <div className="col-4">
+              <input
+                type="submit"
+                value="Search"
+                className="btn btn-primary shadow-sm"
+              />
+            </div>
+
+            <div className="col-4">
+              <input
+                className="current-location btn btn-outline-primary shadow-sm"
+                type="submit"
+                value=" 📍  "
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+
+       {/* Main */}
 
         <div className="city-name">
           <h2>{weatherData.city}</h2>
