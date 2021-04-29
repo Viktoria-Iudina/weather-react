@@ -1,17 +1,19 @@
 body {
-  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  background-image: url(https://images.unsplash.com/photo-1428908728789-d2de25dbd4e2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+  background-size: cover;
 }
 
 /* Main */
 .body {
-  border: 1px solid gray;
   margin: auto;
-  border-radius: 5px;
+  border-radius: 25px;
   max-width: 550px;
   box-shadow: 9px 10px 22px -12px rgba(92, 85, 148, 0.75);
   -webkit-box-shadow: 9px 10px 22px -12px rgba(92, 85, 148, 0.75);
   -moz-box-shadow: 9px 10px 22px -12px rgba(92, 85, 148, 0.75);
   padding-left: 1rem;
+  background-color: whitesmoke;
+  opacity: 85%;
 }
 .row {
   padding: 15px;
@@ -48,11 +50,7 @@ body {
   position: relative;
   top: -17px;
 }
-.fa-cloud {
-  text-align: center;
-  font-size: 3rem;
-  color: #2d2d50;
-}
+
 .tempIcon {
   display: flex;
   justify-content: space-between;
