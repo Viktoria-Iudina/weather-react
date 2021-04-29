@@ -3,6 +3,7 @@ import "./App.css";
 import SearchEngine from "./SearchEngine";
 import Signature from "./Signature";
 import WeatherDescription from "./WeatherDescription";
+import Forecast from "./Forecast";
 
 export default function Main() {
   let weatherData = {
@@ -42,6 +43,7 @@ export default function Main() {
         </div>
 
         <WeatherDescription />
+        <Forecast />
       </div>
       <Signature />
     </div>
