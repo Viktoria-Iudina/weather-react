@@ -13,7 +13,7 @@ body {
   -moz-box-shadow: 9px 10px 22px -12px rgba(92, 85, 148, 0.75);
   padding-left: 1rem;
   background-color: whitesmoke;
-  opacity: 85%;
+  opacity: 85;
 }
 .row {
   padding: 15px;
