@@ -12,7 +12,7 @@ export default function Main(props) {
   setWeatherData({
     ready: true,
     city: response.data.name,
-    date: new Date,
+    date: new Date(),
     temp: response.data.main.temp,
     description: response.data.weather[0].description,
     icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
