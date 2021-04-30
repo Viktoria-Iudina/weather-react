@@ -12,8 +12,8 @@ body {
   -webkit-box-shadow: 9px 10px 22px -12px rgba(92, 85, 148, 0.75);
   -moz-box-shadow: 9px 10px 22px -12px rgba(92, 85, 148, 0.75);
   padding-left: 1rem;
-  background-color: whitesmoke;
-  opacity: 85;
+  background-color: white;
+  opacity: 89%;
 }
 .row {
   padding: 15px;
