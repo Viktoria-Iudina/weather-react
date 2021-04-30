@@ -2,7 +2,6 @@ import React from "react";
 import axios from "axios";
 import "./App.css";
 import Signature from "./Signature";
-import WeatherDescription from "./WeatherDescription";
 import Forecast from "./Forecast";
 
 export default function Main() {
@@ -12,6 +11,14 @@ export default function Main() {
     description: "Sunny",
     degrees: "19",
     imgUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+  };
+  let descriptionData = {
+    feelsLike: "15°C",
+    tempMin: "12°C",
+    tempMax: "19°C",
+    humidity: "50%",
+    wind: "ono 20 km/h",
+    visibility: "19,3 km"
   };
   return (
     <div className="container">
@@ -76,7 +83,34 @@ export default function Main() {
           </div>
         </div>
 
-        <WeatherDescription />
+        {/* WeatherDescription */}
+
+        <div className="weather-description">
+      <div className="feels-like">
+        <p>
+          Feels like: <span>{descriptionData.feelsLike}</span>
+        </p>
+        <p>
+          °C min: <span>{descriptionData.tempMin}</span>
+        </p>
+        <p>
+          °C max: <span>{descriptionData.tempMax}</span>{" "}
+        </p>
+      </div>
+
+      <div className="humid-wind-visib">
+        <p>
+          Humidity: <span>{descriptionData.humidity}</span>
+        </p>
+        <p>
+          Wind: <span>{descriptionData.wind}</span>
+        </p>
+        <p>
+          Visibility: <span>{descriptionData.visibility}</span>{" "}
+        </p>
+      </div>
+    </div>
+
         <Forecast />
       </div>
       <Signature />
