@@ -12,7 +12,7 @@ export default function Weather(props) {
     if (temperature) {
         return <h4>The temperature in {props.city} is {Math.round(temperature)}°C</h4>
     } else {
-        let apiKey = "7ec53300c1e61afc2dfa56d235a9d50";
+        let apiKey = "735adde991f0a3263e9a14037efe90bf";
         let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}a&units=metric`;
         
         axios.get(apiUrl).then(handleResponse); 

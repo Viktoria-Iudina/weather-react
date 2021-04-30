@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
+import ActualDate from "./ActualDate";
 import Signature from "./Signature";
 import Forecast from "./Forecast";
 
@@ -11,7 +12,7 @@ export default function Main(props) {
   setWeatherData({
     ready: true,
     city: response.data.name,
-    date: "Friday, 30 April",
+    date: new Date,
     temp: response.data.main.temp,
     description: response.data.weather[0].description,
     icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
@@ -70,7 +71,7 @@ export default function Main(props) {
           </div>
   
           <div className="dayAndTime">
-            <h4>{weatherData.date}</h4>
+            <ActualDate date={weatherData.date} />
           </div>
   
           <div className="tempIcon">
@@ -123,7 +124,7 @@ export default function Main(props) {
       </div>
     );
   } else {
-    const apiKey = "7ec53300c1e61afc2dfa56d235a9d50a";
+    const apiKey = "735adde991f0a3263e9a14037efe90bf";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
 
