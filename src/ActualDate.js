@@ -13,5 +13,5 @@ export default function ActualDate(props) {
     if (minutes < 10) {
         minutes = `0${minutes}`;
     }
-    return <div>{day} {hours}:{minutes} </div>;
+    return <h3>{day} {hours}:{minutes} </h3>;
 }
