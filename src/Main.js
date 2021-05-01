@@ -16,7 +16,7 @@ export default function Main(props) {
     date: new Date(),
     temp: response.data.main.temp,
     description: response.data.weather[0].description,
-    icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+    icon: response.data.weather[0].icon,
     feelsLike: response.data.main.feels_like,
     tempMin: response.data.main.temp_min,
     tempMax: response.data.main.temp_max,
@@ -26,20 +26,21 @@ export default function Main(props) {
   });
 }
 
+function handleSubmit(event) {
+  event.preventDefault();
+  search(city);
+}
+function handleCityChange(event) {
+  setCity(event.target.value);
+}
+
 function search() {
     const apiKey = "735adde991f0a3263e9a14037efe90bf";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    search(city);
-  }
 
-  function handleCityChange(event) {
-    setCity(event.target.value);
-  }
 
   if (weatherData.ready) {
     return (
@@ -51,7 +52,7 @@ function search() {
           <div className="Search">
           <form onSubmit={handleSubmit}>
             <div className="row">
-              <div className="col-8">
+              <div className="col-7">
                 <input
                   type="text"
                   placeholder="Enter a city..."
@@ -61,7 +62,7 @@ function search() {
                 />
               </div>
   
-              <div className="col-4">
+              <div className="col-2">
                 <input
                   type="submit"
                   value="Search"
@@ -69,7 +70,7 @@ function search() {
                 />
               </div>
   
-              <div className="col-4">
+              <div className="col-2">
                 <input
                   className="current-location btn btn-outline-primary shadow-sm"
                   type="submit"

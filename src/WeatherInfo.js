@@ -1,5 +1,7 @@
 import React from "react";
 import ActualDate from "./ActualDate";
+import WeatherIcon from "./WeatherIcon";
+import "./App.css";
 
 export default function WeatherInfo(props) {
     return (
@@ -13,12 +15,12 @@ export default function WeatherInfo(props) {
           <div className="dayAndTime">
             <ActualDate date={props.data.date} />
           </div>
-  
+
           <div className="tempIcon">
             <div className="iconDescript">
               <p className="description">{props.data.description}</p>
               <p className="icon">
-                <img src={props.data.icon} alt={props.data.description} />
+                <WeatherIcon code={props.data.icon} />
               </p>
             </div>
   
@@ -29,7 +31,7 @@ export default function WeatherInfo(props) {
               </span>
             </div>
           </div>
-  
+
           {/* WeatherDescription */}
   
           <div className="weather-description">
