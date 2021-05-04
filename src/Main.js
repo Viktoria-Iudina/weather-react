@@ -4,6 +4,7 @@ import "./App.css";
 import Signature from "./Signature";
 import Forecast from "./Forecast";
 import WeatherInfo from "./WeatherInfo";
+import Loader from "react-loader-spinner";
 
 export default function Main(props) {
   const [weatherData, setWeatherData] = useState({ready: false});
@@ -88,6 +89,14 @@ function search() {
     );
   } else {
     search();
-    return "Loading...";
+    return (
+    <Loader
+      type="Puff"
+      color="#00BFFF"
+      height={100}
+      width={100}
+      timeout={3000} 
+      />
+    );
   }
     }
