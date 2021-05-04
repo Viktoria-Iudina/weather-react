@@ -1,11 +1,8 @@
-#forecast {
-  padding-left: 8%;
+.WeatherForecast {
+  text-align: center;
+}
+.WeatherForecast-temperature-min {
+  opacity: 0.6;
+  margin-left: 5px;
 }
 
-.iconForecast {
-  width: 70%;
-}
-
-.tabForecast {
-  padding-left: 4%;
-}

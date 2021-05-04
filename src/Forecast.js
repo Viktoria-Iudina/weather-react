@@ -1,29 +1,22 @@
 import React from "react";
 import "./Forecast.css";
+import WeatherIcon from "./WeatherIcon";
 
 export default function Forecast() {
-  let weatherDetails = {
-    description: "Sunny",
-    iconUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-  };
   return (
-<div className="row" id="forecast">
-        <p className="col-2 tabForecast">
-            hour <br /> °C<img className="iconForecast" src={weatherDetails.iconUrl} alt={weatherDetails.description} />
-        </p>
-
-        <p className="col-2 tabForecast">
-            hour <br /> °C<img className="iconForecast" src={weatherDetails.iconUrl} alt={weatherDetails.description} /> 
-        </p>
-        <p className="col-2 tabForecast">
-            hour <br /> °C<img className="iconForecast" src={weatherDetails.iconUrl} alt={weatherDetails.description} /> 
-        </p>
-        <p className="col-2 tabForecast">
-            hour <br /> °C<img className="iconForecast" src={weatherDetails.iconUrl} alt={weatherDetails.description} /> 
-        </p>
-        <p className="col-2 tabForecast">
-            hour <br /> °C<img className="iconForecast" src={weatherDetails.iconUrl} alt={weatherDetails.description} /> 
-        </p>
+<div className="WeatherForecast">
+    <div className="row">
+        <div className="col">
+            <div className="WeatherForecast-day">
+                Thu
+            </div>
+            <WeatherIcon code="01d" size={36} />
+            <div className="WeatherForecast-temperatures">
+                <span className="WeatherForecast-temperature-max">19°</span>
+                <span className="WeatherForecast-temperature-min">10°</span>
+            </div>
+        </div>
     </div>
+</div>
     );
   }
