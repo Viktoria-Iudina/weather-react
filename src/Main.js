@@ -9,10 +9,12 @@ import Loader from "react-loader-spinner";
 export default function Main(props) {
   const [weatherData, setWeatherData] = useState({ready: false});
   const [city, setCity] = useState(props.defaultCity);
+
   function handleResponse(response) {
     console.log(response.data);
   setWeatherData({
     ready: true,
+    coordinates: response.data.coord,
     city: response.data.name,
     date: new Date(),
     temp: response.data.main.temp,
@@ -82,7 +84,7 @@ function search() {
           </form>
         </div>
         <WeatherInfo data={weatherData}/>
-          <Forecast />
+          <Forecast coordinates={weatherData.coordinates} />
         </div>
         <Signature />
       </div>
