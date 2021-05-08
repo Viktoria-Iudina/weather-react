@@ -1,37 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Forecast.css";
-import WeatherIcon from "./WeatherIcon";
 import axios from "axios";
+import WeatherForecastDay from "./WeatherForecastDay";
 
 export default function Forecast(props) {
+    let [loaded, setLoaded] = useState(false);
+    let [forecast, setForecast] = useState(null);
 
     function handleResponse(response) {
         console.log(response.data);
+        setForecast(response.data.daily);
+        setLoaded(true);
     }
-    console.log(props);
-
-    let apiKey = "7ec53300c1e61afc2dfa56d235a9d50a";
-    let latitude = props.coordinates.lat;
-    let longitude = props.coordinates.lon;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
     
-    axios.get(apiUrl).then(handleResponse);
-
-  return (
-<div className="WeatherForecast">
-    <div className="row">
-        <div className="col">
-            <div className="WeatherForecast-day">
-                Thu
-            </div>
-            <WeatherIcon code="01d" size={36} />
-            <div className="WeatherForecast-temperatures">
-                <span className="WeatherForecast-temperature-max">19°</span>
-                <span className="WeatherForecast-temperature-min">10°</span>
+    if (loaded) {
+        console.log(forecast);
+        return (
+        <div className="WeatherForecast">
+            <div className="row">
+                <div className="col">
+                    <WeatherForecastDay data={forecast[0]} />
+                </div>
             </div>
         </div>
-    </div>
-</div>
-    );
+          );
+        } else {
+        let apiKey = "735adde991f0a3263e9a14037efe90bf";
+        let latitude = props.coordinates.lat;
+        let longitude = props.coordinates.lon;
+        let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+        
+        axios.get(apiUrl).then(handleResponse);
+
+    return null;
+    }
   }
 
