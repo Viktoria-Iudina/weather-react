@@ -33,6 +33,12 @@ background-size: cover;
   padding-left: 8%;
   padding-top: 1rem;
 }
+.dayAndTime {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 8%;
+  padding-right: 22%;
+}
 
 /* SearchEngine */
 .btn-outline-primary {
@@ -77,19 +83,18 @@ background-size: cover;
   padding-top: 1rem;
 }
 
-.description,
-.icon {
+.description {
   text-transform: capitalize;
 }
-.description {
-  font-size: 1.3rem;
+.icon {
+  padding-left: 0px;
 }
 /* WeatherDescription (from WeatherDescription component that was migrated to Main and then deleted) */
 .weather-description {
   display: flex;
   justify-content: space-between;
   padding-left: 8%;
-  padding-right: 20%;
+  padding-right: 14%;
   padding-top: 1rem;
   line-height: 1em;
   padding-bottom: 1rem;

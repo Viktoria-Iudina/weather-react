@@ -55,7 +55,7 @@ function search() {
           <div className="Search">
           <form onSubmit={handleSubmit}>
             <div className="row">
-              <div className="col-7">
+              <div className="col-8">
                 <input
                   type="text"
                   placeholder="Enter a city..."
@@ -65,19 +65,11 @@ function search() {
                 />
               </div>
   
-              <div className="col-2">
+              <div className="col-3">
                 <input
                   type="submit"
                   value="Search"
                   className="btn btn-primary shadow-sm"
-                />
-              </div>
-  
-              <div className="col-2">
-                <input
-                  className="current-location btn btn-outline-primary shadow-sm"
-                  type="submit"
-                  value=" 📍  "
                 />
               </div>
             </div>

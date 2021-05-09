@@ -15,18 +15,24 @@ export default function WeatherInfo(props) {
           </div>
   
           <div className="dayAndTime">
+            <div className="todayDay">
             <ActualDate date={props.data.date} />
+            </div>
+            <div className="todayDescription">
+            <h4 className="description">{props.data.description}</h4>
+            </div>
           </div>
 
           <div className="tempIcon">
             <div className="iconDescript">
-              <p className="description">{props.data.description}</p>
-              <p className="icon">
-                <WeatherIcon code={props.data.icon} size={58} />
-              </p>
+              <div className="icon row">
+                <div className="col pr-4">
+                <WeatherIcon code={props.data.icon} size={75} />
+                </div>
+                <WeatherTemperature celsius={props.data.temp}/>
+              </div>
             </div>
   
-          <WeatherTemperature celsius={props.data.temp}/>
           
           </div>
 
