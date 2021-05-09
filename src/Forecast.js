@@ -8,13 +8,11 @@ export default function Forecast(props) {
     let [forecast, setForecast] = useState(null);
 
     function handleResponse(response) {
-        console.log(response.data);
         setForecast(response.data.daily);
         setLoaded(true);
     }
     
     if (loaded) {
-        console.log(forecast);
         return (
         <div className="WeatherForecast">
             <div className="row">
@@ -24,13 +22,15 @@ export default function Forecast(props) {
                             <div className="col" key={index}>
                                 <WeatherForecastDay data={dailyForecast} />
                             </div>
-                            );
-                        }
-                    })}
-                </div>
+                        );
+                    } else {
+                        return null;
+                    }
+                })}
             </div>
+        </div>
         );
-        } else {
+    } else {
         let apiKey = "735adde991f0a3263e9a14037efe90bf";
         let latitude = props.coordinates.lat;
         let longitude = props.coordinates.lon;
