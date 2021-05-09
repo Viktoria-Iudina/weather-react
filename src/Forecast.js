@@ -22,14 +22,14 @@ export default function Forecast(props) {
                     if (index < 6) {
                         return (
                             <div className="col" key={index}>
-                            <WeatherForecastDay data={dailyForecast} />
+                                <WeatherForecastDay data={dailyForecast} />
                             </div>
-                        );
-                    }
-                })}
+                            );
+                        }
+                    })}
+                </div>
             </div>
-        </div>
-          );
+        );
         } else {
         let apiKey = "735adde991f0a3263e9a14037efe90bf";
         let latitude = props.coordinates.lat;
@@ -40,5 +40,4 @@ export default function Forecast(props) {
 
     return null;
     }
-  }
-
+}
