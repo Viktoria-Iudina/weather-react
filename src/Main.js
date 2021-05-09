@@ -84,7 +84,7 @@ function search() {
           </form>
         </div>
         <WeatherInfo data={weatherData}/>
-          <Forecast coordinates={weatherData.coordinates} />
+        <Forecast coordinates={weatherData.coordinates} />
         </div>
         <Signature />
       </div>
